@@ -4,6 +4,14 @@
 ![Tech Stack](https://img.shields.io/badge/Tech-HTML5_|_CSS3_|_Vanilla_JS-blue?style=for-the-badge)
 ![Theme](https://img.shields.io/badge/Theme-Dark_Navy_&_Gold-goldenrod?style=for-the-badge)
 
+---
+
+## 🔗 Live Demo
+
+### [➤ Click Here to View Live Project](https://mhmdsabeer2029.github.io/ScriptFlow/)
+
+---
+
 Welcome to **ScriptFlow**, a high-end, conversion-optimized static landing page designed specifically for AI-powered web automation and data extraction platforms.
 
 Built with zero external dependencies, this project delivers blazing-fast performance, intricate micro-interactions, and a luxurious UI/UX tailored for modern engineering teams and enterprise clients.
@@ -97,5 +105,5 @@ Because this is a vanilla static site, no complex build steps or package manager
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/mhmdsabeer2029/ScriptFlow.git]
+   git clone [https://github.com/mhmdsabeer2029/ScriptFlow.git](https://github.com/mhmdsabeer2029/ScriptFlow.git)
    ```
