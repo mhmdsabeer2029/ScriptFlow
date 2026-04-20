@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ScriptFlow Pricing — Simple, usage-based plans for every team size." />
+  <title>Pricing — ScriptFlow</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c8a030'/><text y='22' x='5' font-size='18' font-weight='700' font-family='sans-serif' fill='%23060d1b'>SF</text></svg>" />
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="page-overlay"></div>
+<div id="toast-container"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">SF</div>
+      ScriptFlow
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="features.html" class="nav-link">Features</a></li>
+      <li><a href="pricing.html"  class="nav-link">Pricing</a></li>
+      <li><a href="contact.html"  class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="#" class="btn btn-primary btn-sm">Get Started</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mobile-nav-links">
+    <li><a href="index.html"    class="mobile-nav-link">Home</a></li>
+    <li><a href="features.html" class="mobile-nav-link">Features</a></li>
+    <li><a href="pricing.html"  class="mobile-nav-link">Pricing</a></li>
+    <li><a href="contact.html"  class="mobile-nav-link">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-actions">
+    <a href="#" class="btn btn-outline">Log in</a>
+    <a href="#" class="btn btn-primary">Get Started →</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb reveal">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Pricing</span>
+    </div>
+    <h1 class="reveal">Simple pricing,<br><em>powerful results</em></h1>
+    <p class="reveal reveal-delay-1">
+      Pay only for what you use. No hidden fees, no seat-based gotchas. 
+      Every plan includes the full feature set — scale up when you're ready.
+    </p>
+  </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section class="section">
+  <div class="container">
+
+    <!-- Toggle -->
+    <div class="pricing-toggle-wrap reveal">
+      <span class="pricing-toggle-label active" id="monthly-label">Monthly</span>
+      <div class="toggle-switch" id="pricing-toggle" role="switch" aria-checked="false"></div>
+      <span class="pricing-toggle-label" id="annual-label">
+        Annual
+        <span class="pricing-badge-save" style="margin-left:0.5rem;">Save 25%</span>
+      </span>
+    </div>
+
+    <!-- Cards -->
+    <div class="pricing-grid">
+
+      <!-- STARTER -->
+      <div class="pricing-card reveal">
+        <div class="pricing-tier">Starter</div>
+        <h3>For indie hackers & side projects</h3>
+        <p>Everything you need to get started with web automation. Generous free tier included.</p>
+        <div class="pricing-price">
+          <span class="price-currency">$</span>
+          <span class="price-value" data-monthly="29" data-annual="22">29</span>
+          <span class="price-period">/ month</span>
+        </div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="pf-icon">✓</span> 500,000 pages / month</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> 5 concurrent browsers</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> AI script generation (50 runs)</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Residential proxies (shared pool)</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> 10 scheduled workflows</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> REST API access</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Community support</li>
+          <li class="pricing-feature muted"><span class="pf-icon">–</span> CAPTCHA solving</li>
+          <li class="pricing-feature muted"><span class="pf-icon">–</span> Warehouse connectors</li>
+          <li class="pricing-feature muted"><span class="pf-icon">–</span> Custom proxy regions</li>
+        </ul>
+        <a href="#" class="btn btn-outline" style="width:100%;justify-content:center;">
+          Start Free Trial
+        </a>
+        <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;">
+          14-day trial · No credit card
+        </p>
+      </div>
+
+      <!-- PRO (Featured) -->
+      <div class="pricing-card featured reveal reveal-delay-1">
+        <div class="pricing-popular">Most Popular</div>
+        <div class="pricing-tier">Pro</div>
+        <h3>For serious data teams</h3>
+        <p>Full power of ScriptFlow. AI automation, CAPTCHA solving, and priority infrastructure.</p>
+        <div class="pricing-price">
+          <span class="price-currency">$</span>
+          <span class="price-value" data-monthly="149" data-annual="112">149</span>
+          <span class="price-period">/ month</span>
+        </div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="pf-icon">✓</span> 5,000,000 pages / month</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> 50 concurrent browsers</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> AI script generation (unlimited)</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Auto-heal selectors</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Residential proxies (dedicated pool)</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> CAPTCHA solving (all types)</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Unlimited workflows</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Warehouse connectors (Snowflake, BQ)</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Priority email support</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> 10 team seats</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;">
+          Start Free Trial →
+        </a>
+        <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;">
+          14-day trial · No credit card
+        </p>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="pricing-card reveal reveal-delay-2">
+        <div class="pricing-tier">Enterprise</div>
+        <h3>For scale & compliance</h3>
+        <p>Custom infrastructure, SLAs, dedicated support, and security controls for mission-critical pipelines.</p>
+        <div class="pricing-price">
+          <span class="price-currency"></span>
+          <span class="price-value" style="font-size:2.5rem;-webkit-text-fill-color:var(--text-primary);">Custom</span>
+        </div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Unlimited pages</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Unlimited concurrent browsers</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Dedicated infrastructure</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Custom proxy network (your IPs)</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> 99.99% uptime SLA</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> SOC 2 Type II report</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> On-premise deployment option</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> All 6 warehouse connectors</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Dedicated Slack channel</li>
+          <li class="pricing-feature"><span class="pf-icon">✓</span> Unlimited seats</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline" style="width:100%;justify-content:center;">
+          Contact Sales →
+        </a>
+        <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;">
+          Custom contract · Annual billing
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Guarantee note -->
+    <div class="text-center reveal" style="margin-top:2.5rem;">
+      <p style="font-size:0.88rem; color:var(--text-secondary);">
+        🔒 All plans include 256-bit encryption · GDPR compliant · 30-day money-back guarantee
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FULL COMPARISON TABLE -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Full Breakdown</div>
+      <h2 class="section-heading">Compare <em>every feature</em></h2>
+    </div>
+
+    <div class="reveal" style="overflow-x:auto; margin-top:2.5rem;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Starter</th>
+            <th class="highlight">Pro</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4" style="background:rgba(200,169,81,0.04);color:var(--gold-400);font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.25rem;">Extraction & Automation</td></tr>
+          <tr>
+            <td>Pages / month</td>
+            <td>500k</td><td class="highlight">5M</td><td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>Concurrent browsers</td>
+            <td>5</td><td class="highlight">50</td><td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>AI script generation</td>
+            <td>50 runs</td><td class="highlight check">Unlimited</td><td class="check">Unlimited</td>
+          </tr>
+          <tr>
+            <td>Auto-heal selectors</td>
+            <td class="cross">✕</td><td class="highlight check">✓</td><td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Pagination handling</td>
+            <td class="check">✓</td><td class="highlight check">✓</td><td class="check">✓</td>
+          </tr>
+
+          <tr><td colspan="4" style="background:rgba(200,169,81,0.04);color:var(--gold-400);font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.25rem;">Proxies & Anti-detection</td></tr>
+          <tr>
+            <td>Residential proxies</td>
+            <td>Shared</td><td class="highlight">Dedicated</td><td>Custom IPs</td>
+          </tr>
+          <tr>
+            <td>Proxy regions</td>
+            <td>10 countries</td><td class="highlight">50 countries</td><td>Custom</td>
+          </tr>
+          <tr>
+            <td>CAPTCHA solving</td>
+            <td class="cross">✕</td><td class="highlight check">✓ All types</td><td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Fingerprint spoofing</td>
+            <td class="check">✓</td><td class="highlight check">✓ Advanced</td><td class="check">✓</td>
+          </tr>
+
+          <tr><td colspan="4" style="background:rgba(200,169,81,0.04);color:var(--gold-400);font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.25rem;">Integrations & Output</td></tr>
+          <tr>
+            <td>REST & GraphQL API</td>
+            <td class="check">✓</td><td class="highlight check">✓</td><td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Webhooks</td>
+            <td class="check">✓</td><td class="highlight check">✓</td><td class="check">✓</td>
+          </tr>
+          <tr>
+            <td>Warehouse connectors</td>
+            <td class="cross">✕</td><td class="highlight">Snowflake, BigQuery</td><td>All 6</td>
+          </tr>
+          <tr>
+            <td>Real-time streaming</td>
+            <td class="cross">✕</td><td class="highlight check">✓ Kafka / SQS</td><td class="check">✓</td>
+          </tr>
+
+          <tr><td colspan="4" style="background:rgba(200,169,81,0.04);color:var(--gold-400);font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 1.25rem;">Team & Support</td></tr>
+          <tr>
+            <td>Team seats</td>
+            <td>1</td><td class="highlight">10</td><td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>Support</td>
+            <td>Community</td><td class="highlight">Priority Email</td><td>Dedicated Slack</td>
+          </tr>
+          <tr>
+            <td>Uptime SLA</td>
+            <td>99.9%</td><td class="highlight">99.95%</td><td>99.99%</td>
+          </tr>
+          <tr>
+            <td>SOC 2 report</td>
+            <td class="cross">✕</td><td class="cross">Summary only</td><td class="highlight check">✓ Full report</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container" style="max-width:780px;">
+    <div class="text-center reveal">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-heading">Common <em>questions</em></h2>
+    </div>
+
+    <div class="faq-list reveal" style="margin-top:3rem;">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What counts as a "page"?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          A page is a single URL loaded in a browser session. Whether you load it to extract data, take a screenshot, or interact with a form — each URL load counts as one page. API-only requests (e.g., fetching JSON endpoints) count at 0.1 pages each.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Can I switch plans mid-cycle?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Yes. You can upgrade or downgrade at any time. Upgrades take effect immediately and are prorated. Downgrades take effect at the start of your next billing cycle. There are no cancellation fees.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What happens if I exceed my page limit?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          We don't hard-stop your pipelines. Instead, overages are billed at $2 per 10,000 pages on Starter, and $1.50 per 10,000 pages on Pro. You'll receive an email alert at 80% and 100% of your monthly quota. You can also set hard caps in your dashboard.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Is there a free tier?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Every account starts with a 14-day free trial of the Pro plan — no credit card required. After the trial, you can downgrade to our free hobby tier which includes 10,000 pages/month and 1 concurrent browser, permanently free.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you offer academic or startup discounts?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Yes. We offer 50% off for verified startups (under 3 years old, under $1M ARR) and 75% off for universities and research institutions. Contact us with proof of eligibility and we'll apply the discount to your account within 24 hours.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What's your data retention policy?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Extracted data is stored in your ScriptFlow account for 30 days on Starter, 90 days on Pro, and custom retention periods on Enterprise. You can export your data at any time in JSON, CSV, or Parquet format. We never sell or analyze your extracted data.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-banner">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="section-label" style="justify-content:center;">Get Started</div>
+      <h2 class="section-heading">Start your <em>free trial</em> today</h2>
+      <p class="section-sub" style="margin:1rem auto 0;text-align:center;">
+        14 days free, full Pro access. No credit card required. Cancel anytime.
+      </p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-primary btn-lg">Start Free Trial →</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Talk to Sales</a>
+      </div>
+      <p class="cta-note">Questions? Email us at <a href="mailto:sales@scriptflow.io" style="color:var(--gold-400);">sales@scriptflow.io</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0.75rem;">
+          <div class="nav-logo-icon">SF</div>
+          ScriptFlow
+        </div>
+        <p>AI-powered web automation and data extraction for modern engineering teams.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Product</div>
+        <ul class="footer-links">
+          <li><a href="features.html" class="footer-link">Features</a></li>
+          <li><a href="pricing.html"  class="footer-link">Pricing</a></li>
+          <li><a href="#" class="footer-link">Changelog</a></li>
+          <li><a href="#" class="footer-link">Roadmap</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Developers</div>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Documentation</a></li>
+          <li><a href="#" class="footer-link">API Reference</a></li>
+          <li><a href="#" class="footer-link">SDKs</a></li>
+          <li><a href="#" class="footer-link">Examples</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="#" class="footer-link">Blog</a></li>
+          <li><a href="#" class="footer-link">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ScriptFlow, Inc. All rights reserved.</span>
+      <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);">v2.4.1 · SOC 2 Type II</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

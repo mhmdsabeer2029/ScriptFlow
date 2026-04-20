@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ScriptFlow Features — AI automation, scraping, browser control, and integrations for modern data teams." />
+  <title>Features — ScriptFlow</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c8a030'/><text y='22' x='5' font-size='18' font-weight='700' font-family='sans-serif' fill='%23060d1b'>SF</text></svg>" />
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="page-overlay"></div>
+<div id="toast-container"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">SF</div>
+      ScriptFlow
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"    class="nav-link">Home</a></li>
+      <li><a href="features.html" class="nav-link">Features</a></li>
+      <li><a href="pricing.html"  class="nav-link">Pricing</a></li>
+      <li><a href="contact.html"  class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="btn btn-ghost btn-sm">Log in</a>
+      <a href="pricing.html" class="btn btn-primary btn-sm">Get Started</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <ul class="mobile-nav-links">
+    <li><a href="index.html"    class="mobile-nav-link">Home</a></li>
+    <li><a href="features.html" class="mobile-nav-link">Features</a></li>
+    <li><a href="pricing.html"  class="mobile-nav-link">Pricing</a></li>
+    <li><a href="contact.html"  class="mobile-nav-link">Contact</a></li>
+  </ul>
+  <div class="mobile-nav-actions">
+    <a href="#" class="btn btn-outline">Log in</a>
+    <a href="pricing.html" class="btn btn-primary">Get Started →</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb reveal">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Features</span>
+    </div>
+    <h1 class="reveal">
+      Built for the web's<br><em>toughest data challenges</em>
+    </h1>
+    <p class="reveal reveal-delay-1">
+      Every feature in ScriptFlow is engineered to handle real-world complexity — 
+      dynamic pages, bot detection, massive scale, and continuous change.
+    </p>
+    <div style="margin-top:2rem;" class="reveal reveal-delay-2">
+      <a href="pricing.html" class="btn btn-primary">Start Free Trial →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE TABS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:2.5rem;">
+      <div class="section-label">Deep Dive</div>
+      <h2 class="section-heading">Explore every <em>capability</em></h2>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="tabs-nav reveal">
+      <button class="tab-btn" data-tab="tab-ai">🤖 AI Automation</button>
+      <button class="tab-btn" data-tab="tab-scraping">🕷️ Scraping Engine</button>
+      <button class="tab-btn" data-tab="tab-browser">🌐 Browser Control</button>
+      <button class="tab-btn" data-tab="tab-integrations">🔌 Integrations</button>
+    </div>
+
+    <!-- TAB: AI Automation -->
+    <div class="tab-panel" id="tab-ai">
+      <div class="feature-detail-grid">
+
+        <div class="card feature-detail-card reveal">
+          <div class="feature-detail-icon">🧠</div>
+          <div class="feature-detail-text">
+            <h3>Natural Language Scripting</h3>
+            <p>Describe what you want to extract in plain English. Our LLM generates a Playwright script, tests it live, and iterates until it works.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-1">
+          <div class="feature-detail-icon">🔄</div>
+          <div class="feature-detail-text">
+            <h3>Auto-Heal Selectors</h3>
+            <p>When a site changes its DOM structure, ScriptFlow automatically detects broken selectors and regenerates them using AI — no manual intervention.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-2">
+          <div class="feature-detail-icon">📐</div>
+          <div class="feature-detail-text">
+            <h3>Schema Inference</h3>
+            <p>AI analyzes the page structure and infers the ideal data schema. Outputs are type-safe JSON, CSV, or Parquet — your choice.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-3">
+          <div class="feature-detail-icon">🧪</div>
+          <div class="feature-detail-text">
+            <h3>AI Quality Checks</h3>
+            <p>After each run, an AI layer validates data freshness, completeness, and type consistency — flagging anomalies before they reach your warehouse.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Code block -->
+      <div class="reveal" style="margin-top:2.5rem;">
+        <div class="section-label">Example</div>
+        <h3 style="font-family:var(--font-display);font-size:1.6rem;margin-bottom:0;">Describe it. Ship it.</h3>
+      </div>
+
+      <div class="code-block reveal" style="margin-top:1.25rem;">
+        <div class="code-block-header">
+          <div class="code-dots">
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+            <span class="code-dot"></span>
+          </div>
+          <span class="code-block-lang">TypeScript · ScriptFlow SDK</span>
+          <button class="code-copy">Copy</button>
+        </div>
+        <pre><code><span class="cm">// Describe your target in natural language</span>
+<span class="kw">import</span> { ScriptFlow } <span class="kw">from</span> <span class="str">'@scriptflow/sdk'</span>;
+
+<span class="kw">const</span> sf = <span class="kw">new</span> <span class="fn">ScriptFlow</span>({ apiKey: process.env.<span class="fn">SF_API_KEY</span> });
+
+<span class="cm">// AI generates and runs the script automatically</span>
+<span class="kw">const</span> result = <span class="kw">await</span> sf.ai.<span class="fn">extract</span>({
+  url: <span class="str">'https://example.com/products'</span>,
+  prompt: <span class="str">'Extract all product names, prices, ratings, and stock status'</span>,
+  schema: {
+    name:   <span class="str">'string'</span>,
+    price:  <span class="str">'number'</span>,
+    rating: <span class="str">'number'</span>,
+    inStock:<span class="str">'boolean'</span>,
+  },
+  options: {
+    paginate: <span class="kw">true</span>,
+    maxPages: <span class="num">10</span>,
+    autoHeal: <span class="kw">true</span>,
+  }
+});
+
+console.<span class="fn">log</span>(result.data); <span class="cm">// Typed, validated JSON array</span></code></pre>
+      </div>
+    </div>
+
+    <!-- TAB: Scraping Engine -->
+    <div class="tab-panel" id="tab-scraping">
+      <div class="feature-detail-grid">
+
+        <div class="card feature-detail-card reveal">
+          <div class="feature-detail-icon">🛡️</div>
+          <div class="feature-detail-text">
+            <h3>Anti-Detection Stack</h3>
+            <p>Residential proxies, TLS fingerprint rotation, human-like mouse movement simulation, and adaptive rate limiting to bypass detection systems.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-1">
+          <div class="feature-detail-icon">🔒</div>
+          <div class="feature-detail-text">
+            <h3>CAPTCHA Solving</h3>
+            <p>reCAPTCHA v2/v3, hCaptcha, Cloudflare Turnstile, and image CAPTCHA all solved automatically using our ML-powered solver network.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-2">
+          <div class="feature-detail-icon">⚡</div>
+          <div class="feature-detail-text">
+            <h3>Concurrent Execution</h3>
+            <p>Run thousands of scraping jobs in parallel across geographically distributed workers. Full isolation prevents cross-job contamination.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-3">
+          <div class="feature-detail-icon">🗺️</div>
+          <div class="feature-detail-text">
+            <h3>50+ Proxy Regions</h3>
+            <p>Residential IPs in 50+ countries with sticky sessions. Route requests through specific ASNs or cities for precise geo-targeting.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal">
+          <div class="feature-detail-icon">📦</div>
+          <div class="feature-detail-text">
+            <h3>Structured Output Formats</h3>
+            <p>Export to JSON, NDJSON, CSV, Parquet, or Arrow. Output schema validation with Zod or JSON Schema for type-safe pipelines.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-1">
+          <div class="feature-detail-icon">🔁</div>
+          <div class="feature-detail-text">
+            <h3>Smart Retries & Fallbacks</h3>
+            <p>Exponential backoff, configurable retry strategies, and automatic proxy failover ensure every job completes — even on flaky sites.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB: Browser Control -->
+    <div class="tab-panel" id="tab-browser">
+      <div class="feature-detail-grid">
+
+        <div class="card feature-detail-card reveal">
+          <div class="feature-detail-icon">🎭</div>
+          <div class="feature-detail-text">
+            <h3>Full Playwright API</h3>
+            <p>Interact with any site just like a real user: click, type, scroll, drag, upload files, handle modals and iframes — full Playwright compatibility.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-1">
+          <div class="feature-detail-icon">📸</div>
+          <div class="feature-detail-text">
+            <h3>Screenshots & PDF Capture</h3>
+            <p>Capture full-page screenshots or generate PDFs on any URL at any viewport. Perfect for visual regression testing and archiving.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-2">
+          <div class="feature-detail-icon">🔐</div>
+          <div class="feature-detail-text">
+            <h3>Session Management</h3>
+            <p>Persist cookies, local storage, and auth tokens across runs. Log into sites once and reuse the session across thousands of workers.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-3">
+          <div class="feature-detail-icon">📱</div>
+          <div class="feature-detail-text">
+            <h3>Mobile Emulation</h3>
+            <p>Emulate any mobile device, screen resolution, or user agent string. Access mobile-only content and test responsive behavior programmatically.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB: Integrations -->
+    <div class="tab-panel" id="tab-integrations">
+      <div class="feature-detail-grid">
+
+        <div class="card feature-detail-card reveal">
+          <div class="feature-detail-icon">❄️</div>
+          <div class="feature-detail-text">
+            <h3>Data Warehouses</h3>
+            <p>Native connectors for Snowflake, BigQuery, Redshift, and Databricks. Push data with automatic schema evolution and deduplication.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-1">
+          <div class="feature-detail-icon">🔗</div>
+          <div class="feature-detail-text">
+            <h3>Webhooks & REST API</h3>
+            <p>Trigger any downstream system on job completion. Our REST and GraphQL API gives you full programmatic control of every resource.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-2">
+          <div class="feature-detail-icon">🗄️</div>
+          <div class="feature-detail-text">
+            <h3>Storage & Queues</h3>
+            <p>S3, GCS, Azure Blob, Kafka, SQS, and Pub/Sub integrations. Stream results in real time or batch-deliver to your preferred destination.</p>
+          </div>
+        </div>
+
+        <div class="card feature-detail-card reveal reveal-delay-3">
+          <div class="feature-detail-icon">📋</div>
+          <div class="feature-detail-text">
+            <h3>Productivity Tools</h3>
+            <p>Push directly to Notion, Airtable, Google Sheets, or Slack. No-code integrations for teams that live outside the terminal.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Comparison</div>
+      <h2 class="section-heading">How ScriptFlow <em>compares</em></h2>
+      <p class="section-sub">We built what we wished existed.</p>
+    </div>
+
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="highlight">ScriptFlow</th>
+            <th>Apify</th>
+            <th>Bright Data</th>
+            <th>Custom Stack</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI-generated scripts</td>
+            <td class="highlight check">✓</td>
+            <td class="cross">✕</td>
+            <td class="cross">✕</td>
+            <td class="cross">✕</td>
+          </tr>
+          <tr>
+            <td>Auto-heal selectors</td>
+            <td class="highlight check">✓</td>
+            <td class="cross">✕</td>
+            <td class="cross">✕</td>
+            <td class="cross">✕</td>
+          </tr>
+          <tr>
+            <td>Visual flow builder</td>
+            <td class="highlight check">✓</td>
+            <td class="check">✓</td>
+            <td class="cross">Partial</td>
+            <td class="cross">✕</td>
+          </tr>
+          <tr>
+            <td>Residential proxies</td>
+            <td class="highlight check">✓ Built-in</td>
+            <td class="cross">Add-on</td>
+            <td class="check">✓</td>
+            <td class="cross">Manual</td>
+          </tr>
+          <tr>
+            <td>CAPTCHA solving</td>
+            <td class="highlight check">✓ ML-powered</td>
+            <td class="cross">Add-on</td>
+            <td class="check">✓</td>
+            <td class="cross">3rd party</td>
+          </tr>
+          <tr>
+            <td>Real-time streaming</td>
+            <td class="highlight check">✓</td>
+            <td class="cross">✕</td>
+            <td class="cross">✕</td>
+            <td class="cross">Complex</td>
+          </tr>
+          <tr>
+            <td>Native warehouse connectors</td>
+            <td class="highlight check">✓ 6 warehouses</td>
+            <td class="cross">Limited</td>
+            <td class="cross">Limited</td>
+            <td class="cross">Build it</td>
+          </tr>
+          <tr>
+            <td>Pricing model</td>
+            <td class="highlight" style="color:var(--gold-300);">Usage-based</td>
+            <td>Compute units</td>
+            <td>Per GB</td>
+            <td>Infrastructure</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta-banner">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="section-label" style="justify-content:center;">Get Started</div>
+      <h2 class="section-heading">See it in action<br>with your own <em>data</em></h2>
+      <p class="section-sub" style="margin:1rem auto 0; text-align:center;">
+        Start a free trial and scrape your first 10,000 pages — no credit card required.
+      </p>
+      <div class="cta-actions">
+        <a href="pricing.html" class="btn btn-primary btn-lg">Start Free Trial →</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Request Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:0.75rem;">
+          <div class="nav-logo-icon">SF</div>
+          ScriptFlow
+        </div>
+        <p>AI-powered web automation and data extraction for modern engineering teams.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Product</div>
+        <ul class="footer-links">
+          <li><a href="features.html" class="footer-link">Features</a></li>
+          <li><a href="pricing.html"  class="footer-link">Pricing</a></li>
+          <li><a href="#" class="footer-link">Changelog</a></li>
+          <li><a href="#" class="footer-link">Roadmap</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Developers</div>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Documentation</a></li>
+          <li><a href="#" class="footer-link">API Reference</a></li>
+          <li><a href="#" class="footer-link">SDKs</a></li>
+          <li><a href="#" class="footer-link">Examples</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="#" class="footer-link">Blog</a></li>
+          <li><a href="#" class="footer-link">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ScriptFlow, Inc. All rights reserved.</span>
+      <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted);">v2.4.1 · SOC 2 Type II</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
