@@ -97,5 +97,5 @@ Because this is a vanilla static site, no complex build steps or package manager
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/mhmdsabeer2029/ScriptFlow.git](https://github.com/mhmdsabeer2029/ScriptFlow.git)
+   git clone [https://github.com/mhmdsabeer2029/ScriptFlow.git]
    ```
