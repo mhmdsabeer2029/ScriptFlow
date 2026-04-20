@@ -12,12 +12,6 @@
 
 ---
 
-## 🔗 Original WebPage
-
-### [➤ Click Here to View Original WebPage](https://www.script-flow.com/)
-
----
-
 Welcome to **ScriptFlow**, a high-end, conversion-optimized static landing page designed specifically for AI-powered web automation and data extraction platforms.
 
 Built with zero external dependencies, this project delivers blazing-fast performance, intricate micro-interactions, and a luxurious UI/UX tailored for modern engineering teams and enterprise clients.
